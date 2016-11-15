@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>JavaScript函数</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function fun1() {
+			alert("我的第一个方法");
+		}
+		fun1();
+		
+		function fun2(param1) {
+			alert(param1);
+		}
+		fun2("fuck");
+		
+		function fun3(param1,param2) {
+			alert(param1+" "+param2);
+		}
+		fun3("fuck","you");
+		
+		function fun4(param1,param2) {
+			return param1+" "+param2;
+		}
+		var result=fun4("fuck","you too");
+		alert(result);
+	</script>
+</body>
+</html>

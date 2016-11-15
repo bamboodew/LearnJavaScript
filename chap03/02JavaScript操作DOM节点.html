@@ -1,0 +1,21 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>JavaScript操作DOM节点</title>
+	<script type="text/javascript" src="DOM.js"></script>
+</head>
+
+<body>
+	<div id="parent">
+		<div id="son1">
+			<font id="txt">:</font><input type="text" id="username" name="username">
+		</div>
+	</div>
+	
+	<!-- input:普通的按钮，添加点击事件“onclick” -->
+	<input type="button" value="修改DOM节点" onclick="modifyDOM()">   <!-- 调用modifyDOM()方法，修改DOM节点 -->
+	<input type="button" value="添加DOM节点" onclick="addDOM()">   <!-- 调用addDOM()方法，添加DOM节点 -->
+	<input type="button" value="删除DOM节点" onclick="removeDOM()">   <!-- 调用removeDOM()方法，删除DOM节点 -->
+</body>
+</html>
