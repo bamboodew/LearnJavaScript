@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>JavaScript对象</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function speak(something) {
+			alert(something);
+		}
+		var p=new Object();   //new一个对象
+		p.name="Jack：动态添加属性";   //动态的添加属性
+		p.func=speak;   //动态的添加方法（函数）
+		alert(p.name);
+		p.func("Hello：动态添加方法");
+		
+		//删除属性和方法
+		/*delete p.name;
+		alert(p.name);
+		delete p.func;
+		p.func("Hello");*/
+		
+		//删除属性和方法
+		/*p.name=undefined;
+		p.func=undefined;
+		alert(p.name);
+		p.func("Hello");*/
+		
+		//对象构造方法：基于Object的原型
+		function person(name,age){
+			this.name=name;   //给当前对象动态添加属性参数name
+			this.age=age;   //给当前对象动态添加属性参数age
+			
+			function speak(something){
+				alert(something);
+			}
+			
+			this.func=speak;
+		}
+		
+		var p1=new person("Lucy：对象构造方法",12);
+		alert(p1.name);
+		p1.func("Hello：对象添加方法");
+	</script>
+</body>
+</html>
